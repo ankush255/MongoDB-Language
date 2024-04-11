@@ -1,0 +1,55 @@
+ use ankush
+
+
+ db.createCollection("cilent_master")
+
+
+ db.cilent_master.insertMany([{
+        "cilentNo" : 'C00001',
+        "Name" : 'Ivan Bayross',
+        "City" : 'Mumbai',
+        "PinCode" : 400054,
+        "State" : 'Maharashtra',
+        "BalDue" : 15000
+     },
+     {
+        "cilentNo" : 'C00002',
+        "Name" : 'Mamta Muzumdar',
+        "City" : 'Madras',
+        "PinCode" : 780001,
+        "State" : 'Tamil Nadu',
+        "BalDue" : 0
+     },
+     {
+        "cilentNo" : 'C00003',
+        "Name" : 'Chhaya Bankar',
+        "City" : 'Mumbai',
+        "PinCode" : 400057,
+        "State" : 'Maharashtra',
+        "BalDue" : 5000
+     },
+     {
+        "cilentNo" : 'C00004',
+        "Name" : 'Ashwini Joshi',
+        "City" : 'Banglore',
+        "PinCode" : 560001,
+        "State" : 'Karnataka',
+        "BalDue" : 0
+     },
+     {
+        "cilentNo" : 'C00005',
+        "Name" : 'Hansel Colaco',
+        "City" : 'Mumbai',
+        "PinCode" : 400060,
+        "State" : 'Maharashtra',
+        "BalDue" : 2000
+     },
+     {
+        "cilentNo" : 'C00006',
+        "Name" : 'Deepak Sharma',
+        "City" : 'Banglore',
+        "PinCode" : 560050,
+        "State" : 'Karnataka',
+        "BalDue" : 0
+     }
+]);
