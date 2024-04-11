@@ -1,0 +1,38 @@
+show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+
+
+use ankush
+
+
+
+ show dbs
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+
+
+ db.createCollection("students")
+
+
+ db.students.insertOne({
+         "name": 'John',
+         "age": 20,
+         "Subjects" : ['Math','Science','Hindi']
+ });
+
+
+
+
+ db.students.insertMany([{
+         "name": 'John',
+         "age" : 21 ,
+          "subject" : ['Math','Science','Hindi']
+         },
+         {"name" : 'Carry',
+          "age" : 18,
+         "Subjects" : ['Math','Science','Hindi']
+         }
+    ]);
