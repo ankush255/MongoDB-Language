@@ -1,0 +1,104 @@
+mongosh
+
+
+
+use ankush
+
+
+
+ db.createCollection("product_master")
+
+
+
+ db.product_master.insertMany([
+    {
+        "ProductNo" : 'P00001',
+        "Descripton" : 'T-Shirts',
+        "Profit Percent" : 5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 200,
+        "ReorderLvl" : 50,
+        "SellPrice" : 350,
+        "CostPrice" : 250
+    },
+    {
+        "ProductNo" : 'P0345',
+        "Descripton" : 'Shirts',
+        "Profit Percent" : 6,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 200,
+        "ReorderLvl" : 150,
+        "SellPrice" : 500,
+        "CostPrice" : 350
+    },
+    {
+        "ProductNo" : 'P06734',
+        "Descripton" : 'Cotton Jeans',
+        "Profit Percent" : 5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 100,
+        "ReorderLvl" : 20,
+        "SellPrice" : 600,
+        "CostPrice" : 450
+    },
+    {
+        "ProductNo" : 'P07865',
+        "Descripton" : 'Jeans',
+        "Profit Percent" : 5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 100,
+        "ReorderLvl" : 20,
+        "SellPrice" : 750,
+        "CostPrice" : 500
+    },
+    {
+        "ProductNo" : 'P07868',
+        "Descripton" : 'Trousers',
+        "Profit Percent" : 2,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 150,
+        "ReorderLvl" : 50,
+        "SellPrice" : 850,
+        "CostPrice" : 550
+    },
+    {
+        "ProductNo" : 'P07885',
+        "Descripton" : 'Pull Overs',
+        "Profit Percent" : 2.5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 80,
+        "ReorderLvl" : 30,
+        "SellPrice" : 700,
+        "CostPrice" : 450
+    },
+    {
+        "ProductNo" : 'P07965',
+        "Descripton" : 'Denim Shorts',
+        "Profit Percent" : 4,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 100,
+        "ReorderLvl" : 40,
+        "SellPrice" : 350,
+        "CostPrice" : 250
+    },
+    {
+        "ProductNo" : 'P07975',
+        "Descripton" : 'Lycra Tops',
+        "Profit Percent" : 5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 70,
+        "ReorderLvl" : 30,
+        "SellPrice" : 300,
+        "CostPrice" : 175
+    },
+    {
+        "ProductNo" : 'P08865',
+        "Descripton" : 'Skirts',
+        "Profit Percent" : 5,
+        "Unit Measure" : 'Piece',
+        "Qty On Hand" : 75,
+        "ReorderLvl" : 30,
+        "SellPrice" : 450,
+        "CostPrice" : 300
+     }
+ ]);
