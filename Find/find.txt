@@ -1,0 +1,357 @@
+mongosh
+
+
+use ankush;
+
+
+
+
+db.cilent_master.find().pretty();
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('661773993f75e1d82116c9b5'),
+    cilentNo: 'C00001',
+    Name: 'Ivan Bayross',
+    City: 'Mumbai',
+    PinCode: 400054,
+    State: 'Maharashtra',
+    BalDue: 15000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b6'),
+    cilentNo: 'C00002',
+    Name: 'Mamta Muzumdar',
+    City: 'Madras',
+    PinCode: 780001,
+    State: 'Tamil Nadu',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b7'),
+    cilentNo: 'C00003',
+    Name: 'Chhaya Bankar',
+    City: 'Mumbai',
+    PinCode: 400057,
+    State: 'Maharashtra',
+    BalDue: 5000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b8'),
+    cilentNo: 'C00004',
+    Name: 'Ashwini Joshi',
+    City: 'Banglore',
+    PinCode: 560001,
+    State: 'Karnataka',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b9'),
+    cilentNo: 'C00005',
+    Name: 'Hansel Colaco',
+    City: 'Mumbai',
+    PinCode: 400060,
+    State: 'Maharashtra',
+    BalDue: 2000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9ba'),
+    cilentNo: 'C00006',
+    Name: 'Deepak Sharma',
+    City: 'Banglore',
+    PinCode: 560050,
+    State: 'Karnataka',
+    BalDue: 0
+  }
+]
+
+
+
+
+
+
+
+
+
+
+ db.product_master.find();
+
+ => Ans :
+
+ [
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b5'),
+    ProductNo: 'P00001',
+    Descripton: 'T-Shirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 50,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b6'),
+    ProductNo: 'P0345',
+    Descripton: 'Shirts',
+    'Profit Percent': 6,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 150,
+    SellPrice: 500,
+    CostPrice: 350
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b7'),
+    ProductNo: 'P06734',
+    Descripton: 'Cotton Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 600,
+    CostPrice: 450
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b8'),
+    ProductNo: 'P07865',
+    Descripton: 'Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 750,
+    CostPrice: 500
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b9'),
+    ProductNo: 'P07868',
+    Descripton: 'Trousers',
+    'Profit Percent': 2,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 150,
+    ReorderLvl: 50,
+    SellPrice: 850,
+    CostPrice: 550
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9ba'),
+    ProductNo: 'P07885',
+    Descripton: 'Pull Overs',
+    'Profit Percent': 2.5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 80,
+    ReorderLvl: 30,
+    SellPrice: 700,
+    CostPrice: 450
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bb'),
+    ProductNo: 'P07965',
+    Descripton: 'Denim Shorts',
+    'Profit Percent': 4,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 40,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bc'),
+    ProductNo: 'P07975',
+    Descripton: 'Lycra Tops',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 70,
+    ReorderLvl: 30,
+    SellPrice: 300,
+    CostPrice: 175
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bd'),
+    ProductNo: 'P08865',
+    Descripton: 'Skirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 75,
+    ReorderLvl: 30,
+    SellPrice: 450,
+    CostPrice: 300
+  }
+]
+
+
+
+
+
+
+
+
+
+
+ db.salesman_master.find();
+
+ => Ans :
+
+ [
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b5'),
+    SalesmanNo: 'S00001',
+    Name: 'Aman',
+    Address1: 'A/14',
+    Address2: 'Worli',
+    City: 'Mumbai',
+    PinCode: 400002,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 100,
+    YtdSales: 50,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b6'),
+    SalesmanNo: 'S00002',
+    Name: 'Omkar',
+    Address1: '65',
+    Address2: 'Nariman',
+    City: 'Mumbai',
+    PinCode: 400001,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b7'),
+    SalesmanNo: 'S00003',
+    Name: 'Raj',
+    Address1: 'P-7',
+    Address2: 'Bandra',
+    City: 'Mumbai',
+    PinCode: 400032,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b8'),
+    SalesmanNo: 'S00004',
+    Name: 'Ashish',
+    Address1: 'A/5',
+    Address2: 'Juhu',
+    City: 'Mumbai',
+    PinCode: 400044,
+    State: 'Maharashtra',
+    SalAmt: 3500,
+    TgtToGet: 200,
+    YtdSales: 150,
+    Remarks: 'Good'
+  }
+]
+
+
+
+
+
+
+
+
+
+
+ db.salesman_master.find({"Name":'Ashish'});
+
+ => Ans :
+
+ [
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b8'),
+    SalesmanNo: 'S00004',
+    Name: 'Ashish',
+    Address1: 'A/5',
+    Address2: 'Juhu',
+    City: 'Mumbai',
+    PinCode: 400044,
+    State: 'Maharashtra',
+    SalAmt: 3500,
+    TgtToGet: 200,
+    YtdSales: 150,
+    Remarks: 'Good'
+  }
+]
+
+
+
+
+
+
+
+
+
+
+db.salesman_master.find({"City":'Mumbai'});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b5'),
+    SalesmanNo: 'S00001',
+    Name: 'Aman',
+    Address1: 'A/14',
+    Address2: 'Worli',
+    City: 'Mumbai',
+    PinCode: 400002,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 100,
+    YtdSales: 50,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b6'),
+    SalesmanNo: 'S00002',
+    Name: 'Omkar',
+    Address1: '65',
+    Address2: 'Nariman',
+    City: 'Mumbai',
+    PinCode: 400001,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b7'),
+    SalesmanNo: 'S00003',
+    Name: 'Raj',
+    Address1: 'P-7',
+    Address2: 'Bandra',
+    City: 'Mumbai',
+    PinCode: 400032,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6618b310d2eab25faa16c9b8'),
+    SalesmanNo: 'S00004',
+    Name: 'Ashish',
+    Address1: 'A/5',
+    Address2: 'Juhu',
+    City: 'Mumbai',
+    PinCode: 400044,
+    State: 'Maharashtra',
+    SalAmt: 3500,
+    TgtToGet: 200,
+    YtdSales: 150,
+    Remarks: 'Good'
+  }
+]

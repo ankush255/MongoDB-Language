@@ -1,0 +1,39 @@
+mongosh
+
+
+
+use ankush
+
+
+db.salesman_master.findOne({"City":'Mumbai'});
+
+=> Ans :
+
+{
+  _id: ObjectId('6618b310d2eab25faa16c9b5'),
+  SalesmanNo: 'S00001',
+  Name: 'Aman',
+  Address1: 'A/14',
+  Address2: 'Worli',
+  City: 'Mumbai',
+  PinCode: 400002,
+  State: 'Maharashtra',
+  SalAmt: 3000,
+  TgtToGet: 100,
+  YtdSales: 50,
+  Remarks: 'Good'
+}
+
+
+
+
+
+
+
+
+
+db.salesman_master.findOne({"City":'Mumbai'},{"Name" : 'Raj'});
+
+=> Ans :
+
+{ _id: ObjectId('6618b310d2eab25faa16c9b5'), Name: 'Raj' }
