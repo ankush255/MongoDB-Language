@@ -1,0 +1,150 @@
+mongosh
+
+
+use ankush
+
+
+
+
+db.product_master.updateOne({"ProductNo":'P08865'},{$unset:{"SellPrice":500}});
+
+=> Ans :
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+
+
+
+
+
+db.product_master.find();
+
+=> Ans :
+
+
+    => Before
+
+         {
+            _id: ObjectId('6618af1e7bbb37dc7b16c9bd'),
+            ProductNo: 'P08865',
+            Descripton: 'Skirts',
+            'Profit Percent': 5,
+            'Unit Measure': 'Piece',
+            'Qty On Hand': 75,
+            ReorderLvl: 30,
+            SellPrice: 450,
+            CostPrice: 300
+        } 
+
+
+
+    => After
+
+
+    [
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b5'),
+    ProductNo: 'P00001',
+    Descripton: 'T-Shirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 50,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b6'),
+    ProductNo: 'P0345',
+    Descripton: 'Shirts',
+    'Profit Percent': 6,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 150,
+    SellPrice: 500,
+    CostPrice: 350
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b7'),
+    ProductNo: 'P06734',
+    Descripton: 'Cotton Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 600,
+    CostPrice: 450
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b8'),
+    ProductNo: 'P07865',
+    Descripton: 'Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 750,
+    CostPrice: 500
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9b9'),
+    ProductNo: 'P07868',
+    Descripton: 'Trousers',
+    'Profit Percent': 2,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 150,
+    ReorderLvl: 50,
+    SellPrice: 850,
+    CostPrice: 550
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9ba'),
+    ProductNo: 'P07885',
+    Descripton: 'Pull Overs',
+    'Profit Percent': 2.5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 80,
+    ReorderLvl: 30,
+    SellPrice: 700,
+    CostPrice: 450
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bb'),
+    ProductNo: 'P07965',
+    Descripton: 'Denim Shorts',
+    'Profit Percent': 4,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 40,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bc'),
+    ProductNo: 'P07975',
+    Descripton: 'Lycra Tops',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 70,
+    ReorderLvl: 30,
+    SellPrice: 300,
+    CostPrice: 175
+  },
+  {
+    _id: ObjectId('6618af1e7bbb37dc7b16c9bd'),
+    ProductNo: 'P08865',
+    Descripton: 'Skirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 75,
+    ReorderLvl: 30,
+    CostPrice: 300
+  }
+]
