@@ -6,7 +6,7 @@ use ankush
 
 
 
-db.product_master.updateOne({"ProductNo":'P08865'},{$unset:{"SellPrice":500}});
+db.product_master.updateOne({"ProductNo":'P08865'},{$inc:{"SellPrice":500}});
 
 => Ans :
 
@@ -17,6 +17,7 @@ db.product_master.updateOne({"ProductNo":'P08865'},{$unset:{"SellPrice":500}});
   modifiedCount: 1,
   upsertedCount: 0
 }
+
 
 
 
@@ -47,8 +48,7 @@ db.product_master.find();
 
     => After
 
-
-    [
+[
   {
     _id: ObjectId('6618af1e7bbb37dc7b16c9b5'),
     ProductNo: 'P00001',
@@ -145,6 +145,7 @@ db.product_master.find();
     'Unit Measure': 'Piece',
     'Qty On Hand': 75,
     ReorderLvl: 30,
+    SellPrice: 950,
     CostPrice: 300
   }
 ]
