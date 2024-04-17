@@ -1,0 +1,92 @@
+mongosh
+
+
+use ankush
+
+
+
+
+
+db.cilent_master.insertOne({lastname:"manogo",lastUpdate: new Date()});
+
+=> Ans :
+
+{
+  acknowledged: true,
+  insertedId: ObjectId('661f4d341b78c54d3816c9b5')
+}
+
+
+
+
+
+
+
+
+
+
+db.cilent_master.find();
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('661773993f75e1d82116c9b5'),
+    cilentNo: 'C00001',
+    Name: 'Ivan Bayross',
+    City: 'Mumbai',
+    PinCode: 400054,
+    State: 'Maharashtra',
+    BalDue: 15000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b6'),
+    cilentNo: 'C00002',
+    Name: 'Mamta Muzumdar',
+    City: 'Madras',
+    PinCode: 780001,
+    State: 'Tamil Nadu',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b7'),
+    cilentNo: 'C00003',
+    Name: 'Chhaya Bankar',
+    City: 'Mumbai',
+    PinCode: 400057,
+    State: 'Maharashtra',
+    BalDue: 5000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b8'),
+    cilentNo: 'C00004',
+    Name: 'Ashwini Joshi',
+    City: 'surat',
+    PinCode: 560001,
+    State: 'Karnataka',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9b9'),
+    cilentNo: 'C00005',
+    Name: 'Hansel Colaco',
+    City: 'Mumbai',
+    PinCode: 400060,
+    State: 'Maharashtra',
+    BalDue: 2000
+  },
+  {
+    _id: ObjectId('661773993f75e1d82116c9ba'),
+    cilentNo: 'C00006',
+    Name: 'Ankush',
+    City: 'surat',
+    PinCode: 560050,
+    State: 'Karnataka',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('661f4d341b78c54d3816c9b5'),
+    lastname: 'manogo',
+    lastUpdate: ISODate('2024-04-17T04:16:52.659Z')
+  }
+]
