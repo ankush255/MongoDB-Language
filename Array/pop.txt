@@ -1,0 +1,50 @@
++1 than remove last element of the array
+
+-1 than remove first element of the array
+
+
+
+
+
+
+
+mongosh
+
+
+
+use ankush
+
+
+
+
+ db.cilent_master.update({cilentNo:"C00006"},{$pop:{value:1}});
+
+ => Ans :
+
+ {
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+
+
+
+db.cilent_master.find();
+
+=> Ans :
+
+
+{
+    _id: ObjectId('661773993f75e1d82116c9ba'),
+    cilentNo: 'C00006',
+    Name: 'Ankush',
+    City: 'surat',
+    PinCode: 560050,
+    State: 'Karnataka',
+    BalDue: 0,
+    value: [],
+    abc: [ [ 1, 2, 3, 4, 5 ] ]
+}

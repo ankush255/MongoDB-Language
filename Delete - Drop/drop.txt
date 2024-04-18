@@ -1,0 +1,36 @@
+mongosh
+
+
+
+use ankush
+
+
+
+ db.client.drop();
+
+ => Ans :
+
+ true
+
+
+
+
+
+
+
+ db.dropDatabase();
+
+=> Ans :
+
+{ ok: 1, dropped: 'ankush' }
+
+
+
+
+
+
+ db.client.find();
+
+ => Ans :
+
+        No Data.

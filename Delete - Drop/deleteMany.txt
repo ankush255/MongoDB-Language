@@ -1,0 +1,27 @@
+mongosh
+
+
+
+use ankush
+
+
+
+
+
+db.client.deleteMany({});
+
+=> Ans :
+
+{ acknowledged: true, deletedCount: 5 }
+
+
+
+
+
+
+db.client.find();
+
+=> Ans :
+
+    client Table All Data Deleted.
+
