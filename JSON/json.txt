@@ -1,0 +1,36 @@
+search =>     https://dummyjson.com/
+
+
+
+copy To Data => Resources  (Copy Data)        :  https://dummyjson.com/products
+                                                 https://dummyjson.com/users
+
+
+
+
+ =>     New File Create To MongoDB File Under JSON File and Paste To 
+        Dummy Data and Second JS File Crete and Paste Dummy Data.
+
+
+>  Open CMD And  :    C:\ankush\MogoDB Language\JSON>mongoimport --db.product_data --collection 
+                      product_collection --file product_file --jsonArray
+
+=> Output :      
+
+    2024-04-19T09:53:32.837+0530    error parsing command line options: unknown option "db.product_data"
+    2024-04-19T09:53:32.837+0530    try 'mongoimport --help' for more information
+
+
+
+
+
+
+> Open MongoDB CMD
+
+=> mongod : import Data
+=> mongosh
+
+=>  load("users.js")      => Ans : true
+
+
+
