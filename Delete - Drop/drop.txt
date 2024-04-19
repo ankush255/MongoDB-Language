@@ -2,15 +2,41 @@ mongosh
 
 
 
-use ankush
+use database
 
 
 
- db.client.drop();
+show collections
+
+=> Ans :
+
+cilent_master
+product_master
+salesman_master
+
+
+
+
+
+
+ db.cilent_master.drop();
 
  => Ans :
 
  true
+
+
+
+
+
+
+show collections
+
+=> Ans :
+
+product_master
+salesman_master
+
 
 
 
@@ -22,18 +48,13 @@ use ankush
 
 => Ans :
 
-{ ok: 1, dropped: 'ankush' }
+{ ok: 1, dropped: 'database' }
 
 
 
 
-
-
-
-
-
-db.client.find();
+shoe collections
 
 => Ans :
 
-        No Data.
+       No Database.
