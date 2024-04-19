@@ -32,8 +32,8 @@ use ankush
 
 
 
- db.client.find();
+db.client.find();
 
- => Ans :
+=> Ans :
 
         No Data.

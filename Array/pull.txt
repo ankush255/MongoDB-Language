@@ -1,0 +1,14 @@
+mongosh
+
+
+
+
+use ankush
+
+
+
+
+db.cilent_master.update({},{$pull:{value:[1,2,3,4]}});
+
+=> Ans :
+
