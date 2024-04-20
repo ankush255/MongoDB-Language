@@ -1,0 +1,49 @@
+List All The Client Who Are Located In Mumbai.
+
+
+
+
+mongosh
+
+
+
+
+
+use ankush
+
+
+
+
+db.cilent_master.find({"City"{$eq: 'Mumbai}});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b5'),
+    cilentNo: 'C00001',
+    Name: 'Ivan Bayross',
+    City: 'Mumbai',
+    PinCode: 400054,
+    State: 'Maharashtra',
+    BalDue: 15000
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b7'),
+    cilentNo: 'C00003',
+    Name: 'Chhaya Bankar',
+    City: 'Mumbai',
+    PinCode: 400057,
+    State: 'Maharashtra',
+    BalDue: 5000
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b9'),
+    cilentNo: 'C00005',
+    Name: 'Hansel Colaco',
+    City: 'Mumbai',
+    PinCode: 400060,
+    State: 'Maharashtra',
+    BalDue: 2000
+  }
+]

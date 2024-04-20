@@ -1,0 +1,99 @@
+Change The City Of The Salesman To Pune.
+
+
+
+
+mongosh
+
+
+
+
+
+use ankush
+
+
+
+
+
+ db.salesman_master.updateMany({"City":"Mumbai"},{$set:{"City":"Pune"}});
+
+ => Ans :
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+
+
+
+
+
+
+
+
+
+db.salesman_master.find();
+
+=> Ans:
+
+[
+  {
+    _id: ObjectId('6620aee1444b3002d116c9b5'),
+    SalesmanNo: 'S00001',
+    Name: 'Aman',
+    Address1: 'A/14',
+    Address2: 'Worli',
+    City: 'Pune',
+    PinCode: 400002,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 100,
+    YtdSales: 50,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6620aee1444b3002d116c9b6'),
+    SalesmanNo: 'S00002',
+    Name: 'Omkar',
+    Address1: '65',
+    Address2: 'Nariman',
+    City: 'Pune',
+    PinCode: 400001,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6620aee1444b3002d116c9b7'),
+    SalesmanNo: 'S00003',
+    Name: 'Raj',
+    Address1: 'P-7',
+    Address2: 'Bandra',
+    City: 'Pune',
+    PinCode: 400032,
+    State: 'Maharashtra',
+    SalAmt: 3000,
+    TgtToGet: 200,
+    YtdSales: 100,
+    Remarks: 'Good'
+  },
+  {
+    _id: ObjectId('6620aee1444b3002d116c9b8'),
+    SalesmanNo: 'S00004',
+    Name: 'Ashish',
+    Address1: 'A/5',
+    Address2: 'Juhu',
+    City: 'Pune',
+    PinCode: 400044,
+    State: 'Maharashtra',
+    SalAmt: 3500,
+    TgtToGet: 200,
+    YtdSales: 150,
+    Remarks: 'Good'
+  }
+]
