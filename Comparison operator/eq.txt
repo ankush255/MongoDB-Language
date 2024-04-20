@@ -1,0 +1,34 @@
+$eq: 
+    It is used To match the value of the fields 
+    that are equal to the specified value.
+
+
+
+
+mongosh
+
+
+
+use ankush
+
+
+
+
+ db.product_master.find({"SellPrice":{$eq:500}})
+
+ => Ans :
+
+
+ [
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b6'),
+    ProductNo: 'P0345',
+    Descripton: 'Shirts',
+    'Profit Percent': 6,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 150,
+    SellPrice: 500,
+    CostPrice: 350
+  }
+]

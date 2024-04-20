@@ -1,0 +1,79 @@
+$lte: 
+    It is used to match values of the fields that 
+    are less than equals to the specific values.
+
+
+
+
+mongosh
+
+
+
+use ankush
+
+
+
+
+
+
+db.product_master.find({"SellPrice":{$lte:500}})
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b5'),
+    ProductNo: 'P00001',
+    Descripton: 'T-Shirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 50,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b6'),
+    ProductNo: 'P0345',
+    Descripton: 'Shirts',
+    'Profit Percent': 6,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 200,
+    ReorderLvl: 150,
+    SellPrice: 500,
+    CostPrice: 350
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9bb'),
+    ProductNo: 'P07965',
+    Descripton: 'Denim Shorts',
+    'Profit Percent': 4,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 40,
+    SellPrice: 350,
+    CostPrice: 250
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9bc'),
+    ProductNo: 'P07975',
+    Descripton: 'Lycra Tops',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 70,
+    ReorderLvl: 30,
+    SellPrice: 300,
+    CostPrice: 175
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9bd'),
+    ProductNo: 'P08865',
+    Descripton: 'Skirts',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 75,
+    ReorderLvl: 30,
+    SellPrice: 450,
+    CostPrice: 300
+  }
+]

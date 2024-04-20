@@ -1,0 +1,68 @@
+$gt: 
+    It is used to match the values of the field 
+    that are greater than a specified value.
+
+
+
+
+mongosh
+
+
+
+use ankush
+
+
+
+
+
+
+db.product_master.find({"SellPrice":{$gt:500}})
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b7'),
+    ProductNo: 'P06734',
+    Descripton: 'Cotton Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 600,
+    CostPrice: 450
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b8'),
+    ProductNo: 'P07865',
+    Descripton: 'Jeans',
+    'Profit Percent': 5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 100,
+    ReorderLvl: 20,
+    SellPrice: 750,
+    CostPrice: 500
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9b9'),
+    ProductNo: 'P07868',
+    Descripton: 'Trousers',
+    'Profit Percent': 2,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 150,
+    ReorderLvl: 50,
+    SellPrice: 850,
+    CostPrice: 550
+  },
+  {
+    _id: ObjectId('6620aeb4e9f530c82d16c9ba'),
+    ProductNo: 'P07885',
+    Descripton: 'Pull Overs',
+    'Profit Percent': 2.5,
+    'Unit Measure': 'Piece',
+    'Qty On Hand': 80,
+    ReorderLvl: 30,
+    SellPrice: 700,
+    CostPrice: 450
+  }
+]
