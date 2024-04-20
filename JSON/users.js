@@ -1,4 +1,6 @@
-[
+db.createCollection('user');
+
+db.user.insertMany([
   {
     id: 1,
     firstName: "Terry",
@@ -1738,4 +1740,4 @@
       network: "Ethereum (ERC20)",
     },
   },
-];
+]);
