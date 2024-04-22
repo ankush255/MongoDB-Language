@@ -1,0 +1,59 @@
+$or: 
+    It is used to join query clauses with 
+    a logical OR and return all documents 
+    that match the given conditions of either clause.
+
+
+
+
+
+mongosh
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+ db.cilent_master.find({$or : [{City:"Banglore"},{Name : "Hansel Colaco"}]});
+
+ => Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b8'),
+    cilentNo: 'C00004',
+    Name: 'Ashwini Joshi',
+    City: 'Banglore',
+    PinCode: 560001,
+    State: 'Karnataka',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b9'),
+    cilentNo: 'C00005',
+    Name: 'Hansel Colaco',
+    City: 'Mumbai',
+    PinCode: 400060,
+    State: 'Maharashtra',
+    BalDue: 2000
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9ba'),
+    cilentNo: 'C00006',
+    Name: 'Deepak Sharma',
+    City: 'Banglore',
+    PinCode: 560050,
+    State: 'Karnataka',
+    BalDue: 0,
+    abc: [ [ 1, 2, 3, 4, 5 ] ],
+    value: []
+  }
+]

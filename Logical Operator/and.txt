@@ -1,0 +1,40 @@
+$and: 
+    It is used to join query clauses with a 
+    logical AND and return all documents that 
+    match the given conditions of both clauses.
+
+
+
+
+
+
+
+mongosh
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+db.cilent_master.find({$and : [{City:"Mumbai"},{Name : "Hansel Colaco"}]});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b9'),
+    cilentNo: 'C00005',
+    Name: 'Hansel Colaco',
+    City: 'Mumbai',
+    PinCode: 400060,
+    State: 'Maharashtra',
+    BalDue: 2000
+  }
+]

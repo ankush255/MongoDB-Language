@@ -1,0 +1,38 @@
+$nin: 
+    It is used to match none of 
+    the values specified in an array.
+
+
+
+
+
+
+mongosh
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+db.cilent_master.find({"City": {$nin : ['Mumbai','Banglore']}});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b6'),
+    cilentNo: 'C00002',
+    Name: 'Mamta Muzumdar',
+    City: 'Madras',
+    PinCode: 780001,
+    State: 'Tamil Nadu',
+    BalDue: 0
+  }
+]

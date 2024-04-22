@@ -1,0 +1,53 @@
+$nor: 
+    it is used to join query clauses with a 
+    logical NOR and return all documents that 
+    fail to match both clauses.
+
+
+
+
+
+mongosh
+
+
+
+
+
+
+use ankush
+
+
+
+db.cilent_master.find({$nor : [{City:"Banglore"},{Name : "Hansel Colaco"}]});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b5'),
+    cilentNo: 'C00001',
+    Name: 'Ivan Bayross',
+    City: 'Mumbai',
+    PinCode: 400054,
+    State: 'Maharashtra',
+    BalDue: 1000
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b6'),
+    cilentNo: 'C00002',
+    Name: 'Mamta Muzumdar',
+    City: 'Madras',
+    PinCode: 780001,
+    State: 'Tamil Nadu',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b7'),
+    cilentNo: 'C00003',
+    Name: 'Chhaya Bankar',
+    City: 'Mumbai',
+    PinCode: 400057,
+    State: 'Maharashtra',
+    BalDue: 5000
+  }
+]

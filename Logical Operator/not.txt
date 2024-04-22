@@ -1,0 +1,55 @@
+$not: 
+    It is used to invert the effect of the 
+    query expressions and return documents 
+    that do not match the query expression.
+
+
+
+
+
+mongosh
+
+
+
+
+
+
+use ankush
+
+
+
+db.cilent_master.find({"City": {$not : {$eq : "Mumbai"}}});
+
+=> Ans :
+
+[
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b6'),
+    cilentNo: 'C00002',
+    Name: 'Mamta Muzumdar',
+    City: 'Madras',
+    PinCode: 780001,
+    State: 'Tamil Nadu',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9b8'),
+    cilentNo: 'C00004',
+    Name: 'Ashwini Joshi',
+    City: 'Banglore',
+    PinCode: 560001,
+    State: 'Karnataka',
+    BalDue: 0
+  },
+  {
+    _id: ObjectId('6620ae1b34a8252ffc16c9ba'),
+    cilentNo: 'C00006',
+    Name: 'Deepak Sharma',
+    City: 'Banglore',
+    PinCode: 560050,
+    State: 'Karnataka',
+    BalDue: 0,
+    abc: [ [ 1, 2, 3, 4, 5 ] ],
+    value: []
+  }
+]
