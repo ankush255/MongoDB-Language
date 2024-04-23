@@ -1,0 +1,22 @@
+$select :
+    This operation can used to Select  
+    a specified number of documents in 
+    the pipeline.
+
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+=> Select Method
+
+db.book.find({}).select({author:1, _id:0})

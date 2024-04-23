@@ -1,0 +1,40 @@
+$match: 
+    This is a filter operation. It filters 
+    the documents to pass only documents that 
+    match the specified condition(s) to the 
+    next pipeline stage.
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+
+=> Aggregate Method
+ 
+db.book.aggregate([
+    {
+        $match: {author: "William Shakespeare", pages: 314}
+    }
+])
+
+
+
+
+
+
+
+
+
+
+
+=> Simple Method
+
+db.book.find({"author": "William Shakespeare"});

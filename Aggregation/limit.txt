@@ -1,0 +1,54 @@
+$limit: 
+    This operation can restricts the number
+     of documents that can pass through the 
+     pipeline.
+
+
+
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+
+
+
+
+
+=> Aggregate Method
+
+db.book.aggregate([
+    {
+        $limit: 55
+    }
+])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=> Simple Method
+
+db.book.find({}).limit(10)

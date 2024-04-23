@@ -1,0 +1,49 @@
+$count: 
+    This operation can used to counts total 
+    amount of documents passed from the previous 
+    stage in the pipeline.
+
+
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+
+
+
+=> Aggregate Method
+
+db.book.aggregate([
+    {
+        $limit: 55
+    },
+    {
+      $skip: 5  
+    },
+    {
+        $count: "Total count"
+    }
+])
+
+
+
+
+
+
+
+
+
+=> Simple Method
+
+db.book.find({}).count()

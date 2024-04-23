@@ -1,0 +1,63 @@
+$project: 
+    This operation can add new fields, 
+    remove existing fields, or reshape 
+    a document's data.
+
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+=> Aggregate Method
+
+
+--- Right
+
+db.book.aggregate([
+    {
+      $match: {
+          country: "England"
+      }  
+    },
+    {
+        $project: {author: 1, _id:0, country:1, pages: 1}                        
+    }
+    ])
+
+
+
+
+--- Wrong
+
+db.book.aggregate([
+    
+    {
+        $project: {author: 1, _id:0, country:1, pages: 1}               // country remove
+    },
+    {
+      $match: {
+          country: "England"
+      }  
+    },
+    ])
+
+
+
+
+
+
+
+
+=> Simple Method
+
+db.book.find({pages: 314}).project({author:1, _id:0})

@@ -1,0 +1,47 @@
+$skip: 
+    This operation can used to skip a 
+    specified number of documents in 
+    the pipeline.
+
+
+
+
+
+
+
+
+
+
+
+use ankush
+
+
+
+
+
+
+
+
+=> Aggregate Method
+
+db.book.aggregate([
+    {
+        $limit: 55
+    },
+    {
+      $skip: 5  
+    }
+])
+
+
+
+
+
+
+
+
+=> Simple Method
+
+db.book.find({}).limit(10).skip(5)
+
+
