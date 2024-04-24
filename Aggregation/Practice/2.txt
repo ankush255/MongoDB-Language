@@ -1,0 +1,119 @@
+db.book.aggregate([
+    {
+        $match: {language: "English"}
+    },
+    {
+        $project: { author :1 , _id:0 , title : 1 , language :1 , pages : 1}
+    },
+    {
+        $limit: 20
+    },
+    {
+        $skip:  8
+    }
+    ])
+    
+
+
+
+
+
+
+
+=> Ans :
+
+/* 1 */
+{
+	"author" : "Joseph Conrad",
+	"language" : "English",
+	"pages" : 320,
+	"title" : "Nostromo"
+},
+
+/* 2 */
+{
+	"author" : "Ernest Hemingway",
+	"language" : "English",
+	"pages" : 128,
+	"title" : "The Old Man and the Sea"
+},
+
+/* 3 */
+{
+	"author" : "William Faulkner",
+	"language" : "English",
+	"pages" : 326,
+	"title" : "The Sound and the Fury"
+},
+
+/* 4 */
+{
+	"author" : "James Joyce",
+	"language" : "English",
+	"pages" : 228,
+	"title" : "Ulysses"
+},
+
+/* 5 */
+{
+	"author" : "D. H. Lawrence",
+	"language" : "English",
+	"pages" : 432,
+	"title" : "Sons and Lovers"
+},
+
+/* 6 */
+{
+	"author" : "Doris Lessing",
+	"language" : "English",
+	"pages" : 688,
+	"title" : "The Golden Notebook"
+},
+
+/* 7 */
+{
+	"author" : "Herman Melville",
+	"language" : "English",
+	"pages" : 378,
+	"title" : "Moby Dick"
+},
+
+/* 8 */
+{
+	"author" : "Vladimir Nabokov",
+	"language" : "English",
+	"pages" : 317,
+	"title" : "Lolita"
+},
+
+/* 9 */
+{
+	"author" : "George Orwell",
+	"language" : "English",
+	"pages" : 272,
+	"title" : "Nineteen Eighty-Four"
+},
+
+/* 10 */
+{
+	"author" : "Salman Rushdie",
+	"language" : "English",
+	"pages" : 536,
+	"title" : "Midnight's Children"
+},
+
+/* 11 */
+{
+	"author" : "Edgar Allan Poe",
+	"language" : "English",
+	"pages" : 842,
+	"title" : "Tales"
+},
+
+/* 12 */
+{
+	"author" : "William Shakespeare",
+	"language" : "English",
+	"pages" : 432,
+	"title" : "Hamlet"
+}
