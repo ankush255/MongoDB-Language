@@ -1,0 +1,75 @@
+db.book.aggregate([
+    {
+        $match: {country: "United States"}
+    },
+    {
+        $project: { author :1 , _id:0 , country:1 , language :1 , pages : 1}
+    },
+    {
+        $limit: 8
+    },
+    {
+        $skip:  1
+    }
+])
+    
+
+
+=> Ans :
+
+
+/* 1 */
+{
+	"author" : "William Faulkner",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 313
+},
+
+/* 2 */
+{
+	"author" : "Ernest Hemingway",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 128
+},
+
+/* 3 */
+{
+	"author" : "William Faulkner",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 326
+},
+
+/* 4 */
+{
+	"author" : "Herman Melville",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 378
+},
+
+/* 5 */
+{
+	"author" : "Edgar Allan Poe",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 842
+},
+
+/* 6 */
+{
+	"author" : "Mark Twain",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 224
+},
+
+/* 7 */
+{
+	"author" : "Toni Morrison",
+	"country" : "United States",
+	"language" : "English",
+	"pages" : 321
+}
