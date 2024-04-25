@@ -1,0 +1,38 @@
+$sort: 
+    This operation can used to sort 
+    all documents in the specified order.
+
+
+
+
+
+
+
+// 1 - Ascending Order
+
+db.book.aggregate([
+    {
+        $sort :{author: 1}
+    }
+    ])
+
+
+
+
+
+
+
+
+
+
+
+// -1 - Descending Order
+
+db.book.aggregate([
+    {
+        $sort :{author: -1}
+    }
+    ])
+
+
+

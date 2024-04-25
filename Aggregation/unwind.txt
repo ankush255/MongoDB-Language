@@ -1,0 +1,89 @@
+$unwind: 
+    This operation is used to separate the 
+    elements of an array field from the input 
+    documents, generating a new document for 
+    each element.
+
+
+
+
+use new
+
+
+
+db.author.insertMany([
+    {_id:1,name:"Ankush",hobbies:["reading","Gamming"]},
+    {_id:2,name:"Jay",hobbies:["reading","Gamming"]},
+    {_id:3,name:"Ram",hobbies:["reading","Gamming"]},
+]);
+
+
+
+
+db.book.insertMany([
+    {name:"Ankush",books:["abc","gbf"]},
+    {name:"Jay",books:["abc","gbf"]},
+    {name:"Ram",books:["abc","gbf"]},
+])
+
+
+
+
+
+
+
+
+
+
+db.author.aggregate([
+    {$unwind: "$hobbies"} , 
+    // {$group: { _id: "$name"}}
+])
+
+
+
+
+=> Ans :
+
+
+/* 1 */
+{
+	"_id" : 1,
+	"name" : "Ankush",
+	"hobbies" : "reading"
+},
+
+/* 2 */
+{
+	"_id" : 1,
+	"name" : "Ankush",
+	"hobbies" : "Gamming"
+},
+
+/* 3 */
+{
+	"_id" : 2,
+	"name" : "Jay",
+	"hobbies" : "reading"
+},
+
+/* 4 */
+{
+	"_id" : 2,
+	"name" : "Jay",
+	"hobbies" : "Gamming"
+},
+
+/* 5 */
+{
+	"_id" : 3,
+	"name" : "Ram",
+	"hobbies" : "reading"
+},
+
+/* 6 */
+{
+	"_id" : 3,
+	"name" : "Ram",
+	"hobbies" : "Gamming"
+}

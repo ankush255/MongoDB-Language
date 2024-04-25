@@ -1,0 +1,39 @@
+$group: 
+    This operation can used to group documents 
+    based on a specified key or keys and perform 
+    various aggregate operations on the grouped data.
+
+
+
+
+
+use ankush
+
+
+
+
+
+db.salesman_master.aggregate([
+    {
+        $group: { _id: "$SalAmt",
+            total: {$sum: "$TgtToGet" }
+        }
+    }
+    ]);
+
+
+
+=> Ans :
+
+
+/* 1 */
+{
+	"_id" : 3000,
+	"total" : 500
+},
+
+/* 2 */
+{
+	"_id" : 3500,
+	"total" : 200
+}

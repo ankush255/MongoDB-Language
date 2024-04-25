@@ -1,0 +1,107 @@
+- `**$lookup**`: 
+    This operation can used to perform a left outer join 
+    between documents from the current collection and documents 
+    from another collection. It allows you to combine documents 
+    from different collections based on a common field or expression.
+
+    => **from**        : The collection to use for lookup in the same database
+    => **localField**  : The field in the primary collection that can be used as 
+                        a unique identifier in the from collection.
+    => **foreignField**: The field in the form a collection that can be used as a 
+                        unique identifier in the primary collection.
+    => **as**          : The name of the new field that will contain the matching 
+                        documents from the from collection.
+
+
+
+
+use new
+
+
+
+db.author.insertMany([
+    {_id:1,name:"Ankush",hobbies:["reading","Gamming"]},
+    {_id:2,name:"Jay",hobbies:["reading","Gamming"]},
+    {_id:3,name:"Ram",hobbies:["reading","Gamming"]},
+]);
+
+
+
+
+db.book.insertMany([
+    {name:"Ankush",books:["abc","gbf"]},
+    {name:"Jay",books:["abc","gbf"]},
+    {name:"Ram",books:["abc","gbf"]},
+])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+db.author.aggregate([
+    {
+        $lookup: {
+               from: "book",
+               localField: "name",
+               foreignField: "name",
+               as: "First Name"
+             }
+    }
+])
+
+
+=> Ans :
+
+
+/* 1 */
+{
+	"_id" : 1,
+	"name" : "Ankush",
+	"hobbies" : [ "reading", "Gamming" ],
+	"First Name" : [
+		{
+			"_id" : ObjectId("6629cf7d163daf02d916c9b5"),
+			"name" : "Ankush",
+			"books" : [ "abc", "gbf" ]
+		}
+	]
+},
+
+/* 2 */
+{
+	"_id" : 2,
+	"name" : "Jay",
+	"hobbies" : [ "reading", "Gamming" ],
+	"First Name" : [
+		{
+			"_id" : ObjectId("6629cf7d163daf02d916c9b6"),
+			"name" : "Jay",
+			"books" : [ "abc", "gbf" ]
+		}
+	]
+},
+
+/* 3 */
+{
+	"_id" : 3,
+	"name" : "Ram",
+	"hobbies" : [ "reading", "Gamming" ],
+	"First Name" : [
+		{
+			"_id" : ObjectId("6629cf7d163daf02d916c9b7"),
+			"name" : "Ram",
+			"books" : [ "abc", "gbf" ]
+		}
+	]
+}
