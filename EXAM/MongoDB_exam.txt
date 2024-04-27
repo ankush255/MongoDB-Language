@@ -1,0 +1,239 @@
+// -- 1
+
+use ecommerce
+
+
+
+// --2
+
+db.createCollection("customers");
+db.createCollection("products");
+db.createCollection("orders");
+db.createCollection("order_item");
+
+
+
+
+// -- 3
+
+db.customers.insertMany([
+    {
+        "Customer_id":"C00001",
+        "firstName":"Ankush",
+        "lastName":"Thummar",
+        "email":"ankush67@gmail.com",
+        "password":"ankush6788"
+    },
+    {
+        "Customer_id":"C00002",
+        "firstName":'Het',
+        "lastName":'Lathiya',
+        "email":'het278@gmail.com',
+        "password":'het673'
+    },
+    {
+        "Customer_id":"C00003",
+        "firstName":"Nayan",
+        "lastName":"Katariya",
+        "email":"nayan67@gmail.com",
+        "password":"nayan90"
+    },
+    {
+        "Customer_id":"C00004",
+        "firstName":"Minesh",
+        "lastName":"Savaliya",
+        "email":"mineah45@gmail.com",
+        "password":"munno908"
+    },
+    {
+        "Customer_id":"C00005",
+        "firstName":"Raj",
+        "lastName":"Kanani",
+        "email":"raj85@gmail.com",
+        "password":"raj08"
+    }]);
+
+
+
+db.products.insertMany([
+    {
+        "Product_id" : "P-1",
+        "product_Name" : "Mobile",
+        "products_description" : "Personal USE",
+        "product_price" : "20000",
+        "product_quantity": "3",
+        "category" : "Electronic",
+    },{
+        "Product_id" : "P-2",
+        "product_Name" : "Charger",
+        "products_description" : "Mobile USE",
+        "product_price" : "1000",
+        "product_quantity": "4",
+        "category" : "Electronic",
+    },{
+        "Product_id" : "P-3",
+        "product_Name" : "Cable",
+        "products_description" : "Charger Connecter",
+        "product_price" : "150",
+        "product_quantity": "6",
+        "category" : "Rubber",
+    },{
+        "Product_id" : "P-4",
+        "product_Name" : "Mobile Cover",
+        "products_description" : "Mobile USE",
+        "product_price" : "200",
+        "product_quantity": "3",
+        "category" : "Rubber , Plastic",
+    },{
+        "Product_id" : "P-5",
+        "product_Name" : "Smart Watch",
+        "products_description" : "Clock and Mini Mobile",
+        "product_price" : "2000",
+        "product_quantity": "5",
+        "category" : "Electronic",
+    }
+]);
+
+
+
+db.orders.insertMany([
+    {
+        "Order_id": "O-1",
+        "Customer_id" : "C00001",
+        "Order_Date" : "2023-10-10",
+        "Total_Price" : "23000.90",
+    }, {
+        "Order_id" : "O-2",
+        "Customer_id" : "C00002",
+        "Order_Date" : "2023-10-13",
+        "Total_Price" : "8700.89",
+    }, {
+        "Order_id" : "O-3",
+        "Customer_id" : "C00003",
+        "Order_Date" : "2023-10-14",
+        "Total_Price" : "34500.50",
+    }, {
+        "Order_id" : "O-4",
+        "Customer_id" : "C00004",
+        "Order_Date" : "2023-10-16",
+        "Total_Price" : "50200.10",
+    }, {
+        "Order_id" : "O-5",
+        "Customer_id" : "C00005",
+        "Order_Date" : "2023-10-19",
+        "Total_Price" : "60900.80",
+    }
+]);
+
+
+
+
+db.order_item.insertMany([
+    {
+        "Order_item_id" : "O-I-1",
+        "Order_id" : "O-1",
+        "Product_id" : "P-1",
+        "Quantity" : "100",
+        "Price" : "100000"
+    },{
+        "Order_item_id" : "O-I-45",
+        "Order_id" : "O-2",
+        "Product_id" : "P-2",
+        "Quantity" : "56",
+        "Price" : "34500"
+    },{
+        "Order_item_id" : "O-I-89",
+        "Order_id" : "O-3",
+        "Product_id" : "P-3",
+        "Quantity" : "90",
+        "Price" : "190000"
+    },{
+        "Order_item_id" : "O-I-98",
+        "Order_id" : "O-4",
+        "Product_id" : "P-4",
+        "Quantity" : "210",
+        "Price" : "50000"
+    },{
+        "Order_item_id" : "O-I-119",
+        "Order_id" : "O-5",
+        "Product_id" : "P-5",
+        "Quantity" : "110",
+        "Price" : "10900"
+    }
+]);
+
+
+
+// -- 4
+
+db.customers.find();
+
+
+
+// --5
+
+db.products.find();
+
+
+
+// --6 
+
+db.orders.find();
+
+
+
+// --7
+
+db.order_item.find();
+
+
+
+// -- 8
+
+db.customers.aggregate([
+    {
+        $lookup: {
+               from: "orders",
+               localField: "Customer_id",
+               foreignField: "Customer_id",
+               as: "ID"
+             }
+    }
+]);
+
+
+
+// --9
+
+db.products.updateOne({"Product_id" : 'P-1'},{$set : {"product_quantity" : '10'}});
+
+
+
+// --10
+
+
+
+
+// -- 11
+
+db.products.aggregate([
+    {
+        $sort:{"category" : 1}
+    }
+]);
+
+
+
+
+// --12
+
+db.orders.deleteOne({"Order_id" : 'O-3'});
+
+
+
+
+
+
+
+
+09
